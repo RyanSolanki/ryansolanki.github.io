@@ -1,0 +1,62 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+body{
+    /* Background Image */
+    background-image: url(/HomeImages/Background_Home_4.png);
+    background-color: #f6eee8;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 650px;
+    background-attachment: fixed;
+
+    /* Year Buttons */
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    padding-top: 350px;
+    padding-left: 450px;
+}
+
+.card{
+    height: 200px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+}
+
+img.Year1{
+    height: 200px;
+    width: 150px;
+    border-radius: 3px;
+}
+
+.intro{
+    height: 35px;
+    width: 150px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 79px;
+    background: rgb(27, 27, 27, .5);
+    color: white;
+}
+
+h1{
+    font-size: 20px;
+}
+
+p{
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.card:hover{
+    cursor: pointer;
+}

@@ -6,7 +6,7 @@
 
 body{
     /* Background Image */
-    background-image: url(/HomeImages/Background_Home_4.png);
+    background-image: url(/HomeImages/Background.png);
     background-color: #f6eee8;
     background-repeat: no-repeat;
     background-position: center center;
@@ -19,23 +19,33 @@ body{
     align-items: center;
 }
 
-.container{
+.left-container{
     display: flex;
-    padding-top: 350px;
-    padding-left: 450px;
+    position: fixed;
+    padding-top: 250px;
+    padding-left: 250px;
+    z-index: 2;
+}
+
+.right-container{
+    display: flex;
+    position: fixed;
+    padding-top: 250px;
+    padding-left: 1000px;
+    z-index: 1;
 }
 
 .card{
     height: 300px;
     box-shadow: 5px 5px 20px black;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 img.Year1{
     height: 300px;
     width: 225px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .intro{
@@ -44,11 +54,11 @@ img.Year1{
     padding-left: 55px;
     box-sizing: border-box;
     position: absolute;
-    bottom: 40px;
+    bottom: 0px;
     background: rgb(27, 27, 27, .5);
     color: white;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 2vb;
 }
 
 .h1_card{

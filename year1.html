@@ -5,9 +5,24 @@
         <title>Year 1 Image Gallery</title>
         <link rel="stylesheet" href="gallery_style.css">
         <link rel="stylesheet" href="lightbox.css">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </head>
     <body style="background-color:#f6eee8;">
+
+                <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="year1.html">Year 1</a></li>
+                <li><a href="#">Year 2</a></li>
+            </ul>
+        </nav>
+
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" onkeyup="searchImages()" placeholder="Search for images...">
+        </div>
+
         <div class="container">
             <div class="gallery">
                 <a href="Year1/Halloween2022.JPG" data-lightbox="Year 1" data-title="Halloween 2022">
@@ -103,5 +118,23 @@
             </div>
         </div>
         <script src="lightbox-plus-jquery.js"></script>
+        <script>
+            function searchImages() {
+                var input, filter, gallery, links, a, i, txtValue;
+                input = document.getElementById("searchInput");
+                filter = input.value.toUpperCase();
+                gallery = document.getElementsByClassName("gallery")[0];
+                links = gallery.getElementsByTagName("a");
+                for (i = 0; i < links.length; i++) {
+                    a = links[i];
+                    txtValue = a.getAttribute("data-title");
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        a.style.display = "";
+                    } else {
+                        a.style.display = "none";
+                    }
+                }
+            }
+        </script>
     </body>
 </html>

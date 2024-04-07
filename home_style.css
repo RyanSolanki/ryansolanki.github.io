@@ -6,17 +6,18 @@
 
 body{
     /* Background Image */
-    background-image: url(/HomeImages/Background.png);
+    background-image: url('/HomeImages/Background.png'), url('/HomeImages/heart.png');
     background-color: #f6eee8;
-    background-repeat: no-repeat;
-    background-position: center 85px;
-    background-size: 650px;
+    background-repeat: no-repeat, repeat;
+    background-position: center 85px, left top; 
+    background-size: 650px, 100px 100px; 
     background-attachment: fixed;
 
     /* Year Buttons */
     display: flex;
     height: 100vh;
     align-items: center;
+    
 }
 
 .left-container{

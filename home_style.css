@@ -1,26 +1,25 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
 }
 
-body{
+body {
     /* Background Image */
     background-image: url('/HomeImages/Background.png'), url('/HomeImages/heart.png');
     background-color: #f6eee8;
     background-repeat: no-repeat, repeat;
-    background-position: center 85px, left top; 
-    background-size: 650px, 100px 100px; 
+    background-position: center 85px, left top;
+    background-size: 650px, 100px 100px;
     background-attachment: fixed;
 
     /* Year Buttons */
     display: flex;
     height: 100vh;
     align-items: center;
-    
 }
 
-.left-container{
+.left-container {
     display: flex;
     position: fixed;
     padding-top: 200px;
@@ -28,7 +27,7 @@ body{
     z-index: 2;
 }
 
-.right-container{
+.right-container {
     display: flex;
     position: fixed;
     padding-top: 200px;
@@ -36,22 +35,24 @@ body{
     z-index: 1;
 }
 
-.card{
+.card {
     height: 300px;
+    width: 225px; /* Ensure the card has a set width */
     box-shadow: 5px 5px 30px black;
     overflow: hidden;
     border-radius: 20px;
+    position: relative; /* Ensure card is positioned relative */
 }
 
-img.Year1{
+img.Year1 {
     height: 300px;
-    width: 225px;
+    width: 100%; /* Adjust width to 100% to fit the card */
     border-radius: 20px;
 }
 
-.intro{
+.intro {
     height: 40px;
-    width: 225px;
+    width: 100%; /* Adjust width to 100% to fit the card */
     padding-left: 55px;
     box-sizing: border-box;
     position: absolute;
@@ -59,18 +60,18 @@ img.Year1{
     background: rgb(27, 27, 27, .5);
     color: white;
     border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 2vb;
+    border-bottom-right-radius: 20px;
     transition: height 0.3s ease;
 }
 
-.h1_card{
+.h1_card {
     font-size: 30px;
     font-family: 'Brush Script MT', cursive;
     padding-left: 20px;
     color: #f6eee8;
 }
 
-.intro p{
+.intro p {
     font-size: 10px;
     font-weight: bold;
     padding-left: 10px;
@@ -80,7 +81,7 @@ img.Year1{
     visibility: hidden;
 }
 
-.card:hover{
+.card:hover {
     cursor: pointer;
 }
 
@@ -107,7 +108,11 @@ img.Year1{
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Keep the original spacing */
+}
+
+.navbar ul li {
+    flex: 1; /* Allow each item to flex equally */
 }
 
 .navbar ul li a {
@@ -125,3 +130,49 @@ img.Year1{
     color: black;
 }
 
+/* Responsive Styles for mobile view */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: flex-start;
+        background-size: 100%, 50px 50px; /* Adjust background size for smaller screens */
+    }
+
+    .left-container, .right-container {
+        position: static;
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-container {
+        padding-top: 100px;
+    }
+
+    .right-container {
+        padding-top: 20px;
+    }
+
+    .navbar ul {
+        justify-content: space-around; /* Keep the spacing as before */
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+        padding: 10px 8px;
+    }
+}
+
+/* Responsive Styles for very small screens */
+@media (max-width: 480px) {
+    body {
+        background-size: 80%, 40px 40px; /* Adjust background size for very small screens */
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+        padding: 8px 4px;
+    }
+}

@@ -23,7 +23,7 @@ body {
     display: flex;
     position: fixed;
     padding-top: 200px;
-    padding-left: 250px;
+    padding-left: 300px;
     z-index: 2;
 }
 
@@ -51,34 +51,39 @@ img.Year1 {
 }
 
 .intro {
-    height: 40px;
+    height: 40px; /* Set a fixed height for the intro */
     width: 100%; /* Adjust width to 100% to fit the card */
-    padding-left: 55px;
     box-sizing: border-box;
     position: absolute;
     bottom: 0px;
-    background: rgb(27, 27, 27, .5);
+    background: rgba(27, 27, 27, .5); /* Use rgba for consistent transparency */
     color: white;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     transition: height 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    padding: 5px 10px; /* Adjust padding for consistent spacing */
 }
 
 .h1_card {
-    font-size: 30px;
+    font-size: 24px; /* Adjust font size for better readability */
     font-family: 'Brush Script MT', cursive;
-    padding-left: 20px;
     color: #f6eee8;
+    margin: 0; /* Remove default margins */
 }
 
 .intro p {
-    font-size: 10px;
+    font-size: 12px; /* Adjust font size for better readability */
     font-weight: bold;
-    padding-left: 10px;
     color: #f6eee8;
     font-family: Arial, sans-serif;
     font-style: italic;
     visibility: hidden;
+    margin: 0; /* Remove default margins */
 }
 
 .card:hover {
@@ -86,7 +91,7 @@ img.Year1 {
 }
 
 .card:hover .intro {
-    height: 50px;
+    height: 55px; /* Adjust height for hover effect */
 }
 
 .card:hover .intro p {

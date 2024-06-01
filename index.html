@@ -41,5 +41,31 @@
         </a>
     </div>
 
+    <!-- Popup Window -->
+    <div class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>A Message For My Love</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+            <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+            <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var popup = document.querySelector('.popup');
+            var closeButton = document.querySelector('.close');
+
+            closeButton.addEventListener('click', function () {
+                popup.style.display = 'none';
+            });
+
+            // Display the popup when the page loads
+            popup.style.display = 'block';
+        });
+    </script>
+
 </body>
 </html>

@@ -40,6 +40,9 @@
     justify-content: space-around;
 }
 
+.navbar ul li {
+    flex: 1; /* Allow each item to flex equally */
+}
 .navbar ul li a {
     display: block;
     color: #f6eee8;

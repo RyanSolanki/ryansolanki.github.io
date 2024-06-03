@@ -156,6 +156,9 @@ img.Year1 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 80%;  /* Add a max-width */
+    max-height: 80%;  /* Add a max-height */
+    overflow-y: auto;
 }
 
 .close {
@@ -220,6 +223,23 @@ img.Year1 {
     }
 }
 
+/* Responsive Styles for popup on mobile view */
+@media (max-width: 768px) {
+    .popup-content {
+        max-width: 90%;  /* Adjust max-width for mobile */
+        padding: 15px;  /* Adjust padding for mobile */
+        font-size: 16px;  /* Adjust font-size for mobile */
+    }
+
+    .popup-content h2 {
+        font-size: 36px;  /* Adjust heading size for mobile */
+    }
+
+    .popup-content p {
+        font-size: 18px;  /* Adjust paragraph size for mobile */
+    }
+}
+
 /* Responsive Styles for very small screens */
 @media (max-width: 480px) {
     body {
@@ -229,6 +249,19 @@ img.Year1 {
     .navbar ul li a {
         font-size: 16px;
         padding: 8px 4px;
+    }
+
+    .popup-content {
+        max-width: 95%;  /* Adjust max-width for very small screens */
+        padding: 10px;  /* Adjust padding for very small screens */
+    }
+
+    .popup-content h2 {
+        font-size: 28px;  /* Adjust heading size for very small screens */
+    }
+
+    .popup-content p {
+        font-size: 16px;  /* Adjust paragraph size for very small screens */
     }
 }
 

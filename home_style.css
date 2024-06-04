@@ -199,7 +199,7 @@ img.Year1 {
     .left-container, .right-container {
         position: static;
         padding: 20px;
-        max-width: 70%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -229,7 +229,7 @@ img.Year1 {
     }
 
     .popup-content h2 {
-        font-size: 30px;  /* Adjust heading size for mobile */
+        font-size: 36px;  /* Adjust heading size for mobile */
     }
 
     .popup-content p {
@@ -254,11 +254,11 @@ img.Year1 {
     }
 
     .popup-content h2 {
-        font-size: 24px;  /* Adjust heading size for very small screens */
+        font-size: 28px;  /* Adjust heading size for very small screens */
     }
 
     .popup-content p {
-        font-size: 14px;  /* Adjust paragraph size for very small screens */
+        font-size: 16px;  /* Adjust paragraph size for very small screens */
     }
 }
 

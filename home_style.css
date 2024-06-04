@@ -199,7 +199,7 @@ img.Year1 {
     .left-container, .right-container {
         position: static;
         padding: 20px;
-        width: 100%;
+        max-width: 70%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -221,10 +221,7 @@ img.Year1 {
         font-size: 18px;
         padding: 10px 8px;
     }
-}
 
-/* Responsive Styles for popup on mobile view */
-@media (max-width: 768px) {
     .popup-content {
         max-width: 90%;  /* Adjust max-width for mobile */
         padding: 15px;  /* Adjust padding for mobile */
@@ -232,7 +229,7 @@ img.Year1 {
     }
 
     .popup-content h2 {
-        font-size: 36px;  /* Adjust heading size for mobile */
+        font-size: 30px;  /* Adjust heading size for mobile */
     }
 
     .popup-content p {
@@ -257,11 +254,11 @@ img.Year1 {
     }
 
     .popup-content h2 {
-        font-size: 28px;  /* Adjust heading size for very small screens */
+        font-size: 24px;  /* Adjust heading size for very small screens */
     }
 
     .popup-content p {
-        font-size: 16px;  /* Adjust paragraph size for very small screens */
+        font-size: 14px;  /* Adjust paragraph size for very small screens */
     }
 }
 

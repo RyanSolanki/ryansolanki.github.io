@@ -196,13 +196,51 @@ img.Year1 {
         background-size: 100%, 50px 50px;
     }
 
-    .left-container, .right-container {
+    .left-container {
         position: static;
         padding: 20px;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .right-container {
+        position: static;
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .card {
+        height: 150px; /* Reduced height for mobile */
+        width: 125px; /* Reduced width for mobile */
+    }
+
+    img.Year1 {
+        height: 100%; /* Adjust to match the card height */
+        width: 100%; /* Adjust to match the card width */
+        object-fit: cover; /* Ensure the image covers the entire space */
+        border-radius: 20px; /* Match the card's border radius */
+    }
+
+    .intro {
+        height: 30px; /* Reduced height for intro section */
+        padding: 3px 5px; /* Adjust padding for mobile */
+    }
+
+    .h1_card {
+        font-size: 18px; /* Adjust font size for better readability */
+    }
+
+    .intro p {
+        font-size: 10px; /* Adjust font size for better readability */
+    }
+
+    .card:hover .intro {
+        height: 40px; /* Adjust height for hover effect */
     }
 
     .left-container {

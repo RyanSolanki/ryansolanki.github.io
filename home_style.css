@@ -22,16 +22,16 @@ body {
 .left-container {
     display: flex;
     position: fixed;
-    padding-top: 200px;
-    padding-left: 300px;
+    padding-top: 15%;
+    padding-left: 20%;
     z-index: 2;
 }
 
 .right-container {
     display: flex;
     position: fixed;
-    padding-top: 200px;
-    padding-left: 1000px;
+    padding-top: 15%;
+    padding-left: 65%;
     z-index: 1;
 }
 
@@ -187,35 +187,17 @@ img.Year1 {
     font-style: italic;
 }
 
-
-/* Responsive Styles for mobile view */
-@media (max-width: 768px) {
+/* Responsive Styles for very small screens */
+@media (max-width: 480px) {
     body {
         flex-direction: column;
-        align-items: flex-start;
-        background-size: 100%, 50px 50px;
+        align-items: center;
+        background-size: 100%, 40px 40px; /* Adjust background size for very small screens */
+        background-position: center 40%, center;
     }
 
-    .left-container {
-        position: static;
-        padding: 20px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .right-container {
-        position: static;
-        padding: 20px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
     .card {
-        height: 150px; /* Reduced height for mobile */
+        height: 170px; /* Reduced height for mobile */
         width: 125px; /* Reduced width for mobile */
     }
 
@@ -231,6 +213,22 @@ img.Year1 {
         padding: 3px 5px; /* Adjust padding for mobile */
     }
 
+    .left-container {
+        display: flex;
+        position: fixed;
+        padding-top: 130%;
+        padding-right: 60%;
+        z-index: 2;
+    }
+    
+    .right-container {
+        display: flex;
+        position: fixed;
+        padding-top: 130%;
+        padding-left: 38%;
+        z-index: 1;
+    }
+
     .h1_card {
         font-size: 18px; /* Adjust font size for better readability */
     }
@@ -243,52 +241,17 @@ img.Year1 {
         height: 40px; /* Adjust height for hover effect */
     }
 
-    .left-container {
-        padding-top: 100px;
-    }
-
-    .right-container {
-        padding-top: 20px;
+    .navbar ul li a {
+        font-size: 16px;
+        padding: 8px 4px;
     }
 
     .navbar ul {
         justify-content: space-around; /* Keep the spacing as before */
     }
 
-    .navbar ul li a {
-        font-size: 18px;
-        padding: 10px 8px;
-    }
-
     .popup-content {
-        max-width: 90%;  /* Adjust max-width for mobile */
-        padding: 15px;  /* Adjust padding for mobile */
-        font-size: 16px;  /* Adjust font-size for mobile */
-    }
-
-    .popup-content h2 {
-        font-size: 36px;  /* Adjust heading size for mobile */
-    }
-
-    .popup-content p {
-        font-size: 18px;  /* Adjust paragraph size for mobile */
-    }
-}
-
-/* Responsive Styles for very small screens */
-@media (max-width: 480px) {
-    body {
-        background-size: 80%, 40px 40px; /* Adjust background size for very small screens */
-    }
-
-    .navbar ul li a {
-        font-size: 16px;
-        padding: 8px 4px;
-    }
-
-    .popup-content {
-        max-width: 95%;  /* Adjust max-width for very small screens */
-        padding: 10px;  /* Adjust padding for very small screens */
+        max-width: 100%;  /* Adjust max-width for very small screens */
     }
 
     .popup-content h2 {

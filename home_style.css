@@ -225,7 +225,7 @@ img.Year1 {
         display: flex;
         position: fixed;
         padding-top: 130%;
-        padding-left: 38%;
+        padding-left: 40%;
         z-index: 1;
     }
 
@@ -239,15 +239,6 @@ img.Year1 {
 
     .card:hover .intro {
         height: 40px; /* Adjust height for hover effect */
-    }
-
-    .navbar ul li a {
-        font-size: 16px;
-        padding: 8px 4px;
-    }
-
-    .navbar ul {
-        justify-content: space-around; /* Keep the spacing as before */
     }
 
     .popup-content {

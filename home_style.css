@@ -181,8 +181,7 @@ img.Year1 {
 }
 
 .popup-content p {
-    margin-bottom: 15px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: Arial, sans-serif;
     font-style: italic;
 }
@@ -248,7 +247,7 @@ img.Year1 {
     }
 
     .popup-content p {
-        font-size: 16px;  /* Adjust paragraph size for very small screens */
+        font-size: 14px;  /* Adjust paragraph size for very small screens */
     }
 }
 

@@ -9,7 +9,6 @@
     </head>
     <body style="background-color:#f6eee8;">
 
-                <!-- Navigation Bar -->
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -21,6 +20,7 @@
         <div class="search-container">
             <i class="fas fa-search search-icon"></i>
             <input type="text" id="searchInput" onkeyup="searchImages()" placeholder="Search for images...">
+            <button id="popupButton" class="popup-button"><img src="Year 2/envelope_png.png" alt="Popup Button"></button>
         </div>
 
         <div class="container">
@@ -397,6 +397,36 @@
 
             </div>
         </div>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h2>Second Anniversary</h2>
+                <p>
+                    Two years ago I made the decision to begin a journey. A journey that I was ready to embark on without any knowledge of where it would take me. 
+                    It all started when I met this girl. We would go out on cute dates, chat all night long until the sun shined through the blinds, and catch the 
+                    fictional sunrises and immersive sunsets together. This girl was special. Perfect, in fact. Over the past couple years she has made me feel levels 
+                    of joy, happiness, and comfort that I had never felt before. Her smile is contagious, her eyes I could stare into indefinitely, her voice calms my 
+                    mind, and her touch fills my heart. She is the only person who knows me for who I really am, and I know that nobody will be able to truly understand 
+                    the infinite amount of love I have for her. If I could go back two years, I would tell myself that the decision to live life with this amazing person 
+                    would be the best decision I will ever make.
+                </p>
+    
+                <p>
+                    <br><br>My Dearest Ayesha, <br><br>
+    
+                    I know this is just the second chapter of our long journey together, but that feeling I had two years ago has only gotten stronger with time. I cannot 
+                    wait to see what the future holds for us. My goal is for this website to be the one place that encapsulates all of our memories together, one year at a 
+                    time. A place you can visit when you are having a bad day and need calm or comfort. A place where we can look back at all the good times and share them 
+                    with friends and family. And most importantly, a place where we can show our future kids what true love looks like. Happy Anniversary, my love! I am forever 
+                    grateful for you.<br><br>
+                    
+                    Love,<br>
+                    Ryan
+                </p>
+            </div>
+        </div>
+
         <script src="lightbox-plus-jquery.js"></script>
         <script>
             function searchImages() {
@@ -413,6 +443,21 @@
                     } else {
                         a.style.display = "none";
                     }
+                }
+            }
+
+            document.getElementById("popupButton").onclick = function() {
+                document.getElementById("popup").style.display = "block";
+            }
+
+            function closePopup() {
+                document.getElementById("popup").style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                var popup = document.getElementById("popup");
+                if (event.target == popup) {
+                    popup.style.display = "none";
                 }
             }
         </script>

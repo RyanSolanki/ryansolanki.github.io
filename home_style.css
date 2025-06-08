@@ -279,17 +279,18 @@ img.Year1 {
     left:15%;
     width: 40px;
     z-index: 1000;
+    color: black;
 }
 
 /* Adjust positioning for small screens (iPhone) */
 @media (max-width: 480px) {
     .prev-btn {
         left: 0%;
-        top: 65vh;
+        top: 67vh;
     }
 
     .next-btn {
         right: 0%;
-        top: 65vh;
+        top: 67vh;
     }
 }

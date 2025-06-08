@@ -285,11 +285,11 @@ img.Year1 {
 @media (max-width: 480px) {
     .prev-btn {
         left: 0%;
-        top: 72vh;
+        top: 65vh;
     }
 
     .next-btn {
         right: 0%;
-        top: 72vh;
+        top: 65vh;
     }
 }

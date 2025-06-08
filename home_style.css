@@ -258,9 +258,11 @@ img.Year1 {
     cursor: pointer;
     padding: 10px;
     position: fixed;
-    top: 50%;
     transform: translateY(-50%);
-    right: 10px;
+    position: fixed; /* Keeps them in place */
+    top: 65vh; /* Positions relative to the viewport height */
+    right:15%;
+    width: 40px;
     z-index: 1000;
 }
 
@@ -271,8 +273,23 @@ img.Year1 {
     cursor: pointer;
     padding: 10px;
     position: fixed;
-    top: 50%;
     transform: translateY(-50%);
-    left: 10px;
+    position: fixed;
+    top: 65vh;
+    left:15%;
+    width: 40px;
     z-index: 1000;
+}
+
+/* Adjust positioning for small screens (iPhone) */
+@media (max-width: 480px) {
+    .prev-btn {
+        left: 0%;
+        top: 72vh;
+    }
+
+    .next-btn {
+        right: 0%;
+        top: 72vh;
+    }
 }

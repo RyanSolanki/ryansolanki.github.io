@@ -287,10 +287,14 @@ img.Year1 {
     .prev-btn {
         left: 0%;
         top: 67vh;
+        position: absolute;
+        color:black;
     }
 
     .next-btn {
         right: 0%;
         top: 67vh;
+        position: absolute;
+        color:black;
     }
 }

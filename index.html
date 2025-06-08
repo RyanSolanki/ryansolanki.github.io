@@ -70,17 +70,74 @@
         </div>
     </div>
 
+    <button class="prev-btn">&#10094;</button>
+    <button class="next-btn">&#10095;</button>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var popup = document.querySelector('.popup');
-            var closeButton = document.querySelector('.close');
+            const cardSets = [
+                [
+                    { href: "year1.html", img: "HomeImages/Year1.JPG", title: "Year One", dates: "June 2022 - June 2023" },
+                    { href: "year2.html", img: "HomeImages/Year2.jpg", title: "Year Two", dates: "June 2023 - June 2024" }
+                ],
+                [
+                    { href: "year3.html", img: "HomeImages/Year3.jpg", title: "Year Three", dates: "June 2024 - June 2025" },
+                    
+                ],
+            ];
 
-            closeButton.addEventListener('click', function () {
-                popup.style.display = 'none';
+            let currentIndex = 0;
+            const leftContainer = document.querySelector('.left-container');
+            const rightContainer = document.querySelector('.right-container');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+
+            function updateCards(index) {
+                leftContainer.innerHTML = `
+                    <a href="${cardSets[index][0].href}">
+                        <div class="card">
+                            <img src="${cardSets[index][0].img}" alt="${cardSets[index][0].title}" class="Year1">
+                            <div class="intro">
+                                <h1 class="h1_card">${cardSets[index][0].title}</h1>
+                                <p>${cardSets[index][0].dates}</p>
+                            </div>
+                        </div>
+                    </a>
+                `;
+
+                // Handle the case where there's only one card in the last group
+                if (cardSets[index][1]) {
+                    rightContainer.innerHTML = `
+                        <a href="${cardSets[index][1].href}">
+                            <div class="card">
+                                <img src="${cardSets[index][1].img}" alt="${cardSets[index][1].title}" class="Year1">
+                                <div class="intro">
+                                    <h1 class="h1_card">${cardSets[index][1].title}</h1>
+                                    <p>${cardSets[index][1].dates}</p>
+                                </div>
+                            </div>
+                        </a>
+                    `;
+                } else {
+                    rightContainer.innerHTML = ""; // Clear right container for single-card case
+                }
+            }
+
+            nextBtn.addEventListener('click', function () {
+                if (currentIndex < cardSets.length - 1) {
+                    currentIndex++;
+                    updateCards(currentIndex);
+                }
             });
 
-            // Display the popup when the page loads
-            popup.style.display = 'block';
+            prevBtn.addEventListener('click', function () {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCards(currentIndex);
+                }
+            });
+
+            updateCards(currentIndex);
         });
     </script>
 

@@ -377,14 +377,14 @@ img.Year1 {
 @media (max-width: 480px) {
     .prev-btn {
         left: 0%;
-        top: 67vh;
+        top: 71vh;
         position: absolute;
         color:black;
     }
 
     .next-btn {
         right: 0%;
-        top: 67vh;
+        top: 71vh;
         position: absolute;
         color:black;
     }

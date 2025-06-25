@@ -21,7 +21,22 @@
         <div class="search-container">
             <i class="fas fa-search search-icon"></i>
             <input type="text" id="searchInput" onkeyup="searchImages()" placeholder="Search for images...">
-            <button id="popupButton" class="popup-button"><img src="Year 2/envelope_png.png" alt="Popup Button"></button>
+            <!-- Button -->
+            <button id="popupButton" class="popup-button">
+            <img src="Year 2/envelope_png.png" alt="Popup Button">
+            </button>
+
+            <!-- PIN Modal -->
+            <div id="pinModal" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <p>Please enter your pin:</p>
+                <input type="password" id="pinInput" inputmode="numeric" pattern="[0-9]*" />
+                <br><br>
+                <button id="submitPin">Submit</button>
+            </div>
+            </div>
+
         </div>
 
         <div class="container">
@@ -125,29 +140,6 @@
             </div>
         </div>
 
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <span class="close" onclick="closePopup()">&times;</span>
-                <h2>First Anniversary</h2>
-                <p>
-                    Dear Ayesha,<br><br>
-
-                    This last year has truly been the best year of my life. I moved to UCR and began a new chapter of my life away from home, started 
-                    my job and of course, I met you. Every minute we spend together feels so special, and every second I’m not with you I wish I was. 
-                    You are the most thoughtful, caring, and beautiful person I know, inside and out. Not only were you my first kiss and my first 
-                    girlfriend, you were also the first person I ever fell in love with. We have created so many memories together since last summer, 
-                    and if the past year in any way resembles what the future holds for us, then I can truly see myself with you forever. I wanted this 
-                    card to be full of sarcasm and stupid jokes, but my emotions took over and I am finally expressing them. Believe it or not, I am 
-                    actually crying for the first time in 7 years while writing this and reminiscing about the past 12 months with you. I am so lucky 
-                    to be able to call you not just my girlfriend, but my best friend :) Happy 1st anniversary! I love you to the moon and back you 
-                    little egghead!<br><br>
-                    
-                    Love, <br>
-                    Ryan
-                </p>
-            </div>
-        </div>
-
         <script src="lightbox-plus-jquery.js"></script>
         <script>
             function searchImages() {
@@ -167,20 +159,43 @@
                 }
             }
 
-            document.getElementById("popupButton").onclick = function() {
-                document.getElementById("popup").style.display = "block";
+            const correctPin = "1234"; // Your chosen PIN
+
+            document.getElementById("popupButton").addEventListener("click", () => {
+            document.getElementById("pinModal").style.display = "block";
+            });
+
+            document.getElementById("submitPin").addEventListener("click", () => {
+            const enteredPin = document.getElementById("pinInput").value;
+            if (enteredPin === correctPin) {
+                window.location.href = "notes.py"; // Make sure this route is served by your backend
+            } else {
+                alert("Incorrect PIN.");
             }
+            });
+            document.getElementById("pinInput").addEventListener("input", function() {
+            this.value = this.value.replace(/\D/g, ''); // Remove non-digits
+            });
 
             function closePopup() {
-                document.getElementById("popup").style.display = "none";
+                document.getElementById("pinModal").style.display = "none";
+                document.getElementById("pinInput").value = "";
             }
 
-            window.onclick = function(event) {
-                var popup = document.getElementById("popup");
-                if (event.target == popup) {
-                    popup.style.display = "none";
-                }
-            }
+            // document.getElementById("popupButton").onclick = function() {
+            //     document.getElementById("popup").style.display = "block";
+            // }
+
+            // function closePopup() {
+            //     document.getElementById("popup").style.display = "none";
+            // }
+
+            // window.onclick = function(event) {
+            //     var popup = document.getElementById("popup");
+            //     if (event.target == popup) {
+            //         popup.style.display = "none";
+            //     }
+            // }
         </script>
     </body>
 </html>

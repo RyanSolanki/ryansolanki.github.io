@@ -146,13 +146,14 @@
 
 #submitPin {
   background-color: #f6eee8;
-  color: black;
+  color: #333;
   font-family: Arial, sans-serif;
   font-style: italic;
   font-size: 14px;
   padding: 3px 12px;
   border-radius: 2px;
   cursor: pointer;
+  border: 1px solid #333;
 }
 
 /* Responsive Styles for very small screens */

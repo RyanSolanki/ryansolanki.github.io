@@ -340,6 +340,10 @@ img.Year1 {
     .popup-content p {
         font-size: 14px;
     }
+
+    .navbar ul li a {
+    font-size: 18px;
+    }
 }
 
 .next-btn {

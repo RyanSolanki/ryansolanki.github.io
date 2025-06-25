@@ -21,6 +21,7 @@
         <div class="search-container">
             <i class="fas fa-search search-icon"></i>
             <input type="text" id="searchInput" onkeyup="searchImages()" placeholder="Search for images...">
+            
             <!-- Button -->
             <button id="popupButton" class="popup-button">
             <img src="Year 2/envelope_png.png" alt="Popup Button">
@@ -30,7 +31,7 @@
             <div id="pinModal" class="popup">
             <div class="popup-content">
                 <span class="close" onclick="closePopup()">&times;</span>
-                <p>Please enter your pin:</p>
+                <p id="pinPrompt">Please enter your pin:</p>
                 <input type="password" id="pinInput" inputmode="numeric" pattern="[0-9]*" />
                 <br><br>
                 <button id="submitPin">Submit</button>
@@ -86,9 +87,7 @@
                 <a href="Year1/Riverside2023_2.JPG" data-lightbox="Year 1" data-title="Riverside 2023">
                     <img src="Year1/Riverside2023_2.JPG">
                 </a>
-                <a href="Year1/FirstAnniversaryNote.jpg" data-lightbox="Year 1" data-title="First Anniversary Note 2023">
-                    <img src="Year1/FirstAnniversaryNote.jpg">
-                </a>
+
                 <a href="Year1/JoshuaTree2023_2.jpg" data-lightbox="Year 1" data-title="Joshua Tree 2023">
                     <img src="Year1/JoshuaTree2023_2.jpg">
                 </a>
@@ -104,15 +103,8 @@
                 <a href="Year1/BigBear2023.jpg" data-lightbox="Year 1" data-title="Big Bear 2023">
                     <img src="Year1/BigBear2023.jpg">
                 </a>
-                <a href="Year1/Riverside2022_2.JPG" data-lightbox="Year 1" data-title="Riverside 2022">
-                    <img src="Year1/Riverside2022_2.JPG">
-                </a>
-                <a href="Year1/Newport2023_1.jpg" data-lightbox="Year 1" data-title="Newport 2023">
-                    <img src="Year1/Newport2023_1.jpg">
-                </a>
-                <a href="Year1/FirstValentinesNote.jpg" data-lightbox="Year 1" data-title="First Valentines Note 2023">
-                    <img src="Year1/FirstValentinesNote.jpg">
-                </a>
+
+
                 <a href="Year1/Newport2023_2.jpg" data-lightbox="Year 1" data-title="Newport 2023">
                     <img src="Year1/Newport2023_2.jpg">
                 </a>
@@ -137,6 +129,12 @@
                 <a href="Year1/CarlsbadFlowerFields2023_2.JPG" data-lightbox="Year 1" data-title="Carlsbad Flower Fields 2023">
                     <img src="Year1/CarlsbadFlowerFields2023_2.JPG">
                 </a>
+                <a href="Year1/Riverside2022_2.JPG" data-lightbox="Year 1" data-title="Riverside 2022">
+                    <img src="Year1/Riverside2022_2.JPG">
+                </a>
+                <a href="Year1/Newport2023_1.jpg" data-lightbox="Year 1" data-title="Newport 2023">
+                    <img src="Year1/Newport2023_1.jpg">
+                </a>
             </div>
         </div>
 
@@ -159,20 +157,24 @@
                 }
             }
 
-            const correctPin = "1234"; // Your chosen PIN
+            const correctPin = "0630";
 
             document.getElementById("popupButton").addEventListener("click", () => {
             document.getElementById("pinModal").style.display = "block";
             });
 
             document.getElementById("submitPin").addEventListener("click", () => {
-            const enteredPin = document.getElementById("pinInput").value;
-            if (enteredPin === correctPin) {
-                window.location.href = "notes.py"; // Make sure this route is served by your backend
-            } else {
-                alert("Incorrect PIN.");
-            }
+                const enteredPin = document.getElementById("pinInput").value;
+                const promptText = document.getElementById("pinPrompt");
+
+                if (enteredPin === correctPin) {
+                    window.location.href = "notes.html";
+                } else {
+                    promptText.textContent = "Invalid PIN. Please try again:";
+                    promptText.style.color = "red";
+                }
             });
+
             document.getElementById("pinInput").addEventListener("input", function() {
             this.value = this.value.replace(/\D/g, ''); // Remove non-digits
             });
@@ -180,22 +182,10 @@
             function closePopup() {
                 document.getElementById("pinModal").style.display = "none";
                 document.getElementById("pinInput").value = "";
+                const promptText = document.getElementById("pinPrompt");
+                promptText.textContent = "Please enter your PIN:";
+                promptText.style.color = "black";
             }
-
-            // document.getElementById("popupButton").onclick = function() {
-            //     document.getElementById("popup").style.display = "block";
-            // }
-
-            // function closePopup() {
-            //     document.getElementById("popup").style.display = "none";
-            // }
-
-            // window.onclick = function(event) {
-            //     var popup = document.getElementById("popup");
-            //     if (event.target == popup) {
-            //         popup.style.display = "none";
-            //     }
-            // }
         </script>
     </body>
 </html>

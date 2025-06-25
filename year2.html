@@ -21,7 +21,23 @@
         <div class="search-container">
             <i class="fas fa-search search-icon"></i>
             <input type="text" id="searchInput" onkeyup="searchImages()" placeholder="Search for images...">
-            <button id="popupButton" class="popup-button"><img src="Year 2/envelope_png.png" alt="Popup Button"></button>
+            
+            <!-- Button -->
+            <button id="popupButton" class="popup-button">
+            <img src="Year 2/envelope_png.png" alt="Popup Button">
+            </button>
+
+            <!-- PIN Modal -->
+            <div id="pinModal" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <p id="pinPrompt">Please enter your pin:</p>
+                <input type="password" id="pinInput" inputmode="numeric" pattern="[0-9]*" />
+                <br><br>
+                <button id="submitPin">Submit</button>
+            </div>
+            </div>
+
         </div>
 
         <div class="container">
@@ -254,9 +270,6 @@
                 <a href="Year 2/London52_2023.jpg" data-lightbox="Year 2" data-title="London 2023">
                     <img src="Year 2/London52_2023.jpg">
                 </a>
-                <a href="Year 2/Note_2023.jpg" data-lightbox="Year 2" data-title="Cute Note 2023">
-                    <img src="Year 2/Note_2023.jpg">
-                </a>
                 <a href="Year 2/Valentines_2024.jpg" data-lightbox="Year 2" data-title="Valentine's Day 2024">
                     <img src="Year 2/Valentines_2024.jpg">
                 </a>
@@ -290,6 +303,11 @@
                 </a>
                 <a href="Year 2/TheBroadLA_3_2023.jpg" data-lightbox="Year 2" data-title="The Broad Museum 2023">
                     <img src="Year 2/TheBroadLA_3_2023.jpg">
+                </a>
+
+                </a>
+                <a href="Year 2/Temecula_Second_Anniversary_2024_7.jpg" data-lightbox="Year 2" data-title="Temecula - Second Anniversary 2024">
+                    <img src="Year 2/Temecula_Second_Anniversary_2024_7.jpg">
                 </a>
 
 
@@ -334,11 +352,6 @@
                     <img src="Year 2/London20_2023.jpg">
                 </a>
 
-
-
-                <a href="Year 2/ValentinesNote_2024.jpg" data-lightbox="Year 2" data-title="Valentine's Day 2024">
-                    <img src="Year 2/ValentinesNote_2024.jpg">
-                </a>
                 <a href="Year 2/London36_2023.jpg" data-lightbox="Year 2" data-title="London 2023">
                     <img src="Year 2/London36_2023.jpg">
                 </a>
@@ -401,6 +414,9 @@
                 <a href="Year 2/Date_Night_Salt_Creek_Beach_2024.jpg" data-lightbox="Year 2" data-title="Date Night - Salt Creek Beach 2024">
                     <img src="Year 2/Date_Night_Salt_Creek_Beach_2024.jpg">
                 </a>
+                <a href="Year 2/Temecula_Second_Anniversary_2024_8.jpg" data-lightbox="Year 2" data-title="Temecula - Second Anniversary 2024">
+                    <img src="Year 2/Temecula_Second_Anniversary_2024_8.jpg">
+                </a>
                 <a href="Year 2/Temecula_Second_Anniversary_2024_9.jpg" data-lightbox="Year 2" data-title="Temecula - Second Anniversary 2024">
                     <img src="Year 2/Temecula_Second_Anniversary_2024_9.jpg">
                 </a>
@@ -425,12 +441,12 @@
                 </a>
                 <a href="Year 2/Temecula_Second_Anniversary_2024_10.jpg" data-lightbox="Year 2" data-title="Temecula - Second Anniversary 2024">
                     <img src="Year 2/Temecula_Second_Anniversary_2024_10.jpg">
+
+                <a href="Year 2/Temecula_Second_Anniversary_2024_18.jpg" data-lightbox="Year 2" data-title="Temecula - Second Anniversary 2024">
+                    <img src="Year 2/Temecula_Second_Anniversary_2024_18.jpg">
                 </a>
-                <a href="Year 2/Temecula_Second_Anniversary_2024_7.jpg" data-lightbox="Year 2" data-title="Temecula - Second Anniversary 2024">
-                    <img src="Year 2/Temecula_Second_Anniversary_2024_7.jpg">
-                </a>
-                <a href="Year 2/Temecula_Second_Anniversary_2024_8.jpg" data-lightbox="Year 2" data-title="Temecula - Second Anniversary 2024">
-                    <img src="Year 2/Temecula_Second_Anniversary_2024_8.jpg">
+                <a href="Year 2/Temecula_Second_Anniversary_2024_19.jpg" data-lightbox="Year 2" data-title="Temecula - Second Anniversary 2024">
+                    <img src="Year 2/Temecula_Second_Anniversary_2024_19.jpg">
                 </a>
 
 
@@ -482,42 +498,8 @@
                 <a href="Year 2/Temecula_Second_Anniversary_2024_17.jpg" data-lightbox="Year 2" data-title="Temecula - Second Anniversary 2024">
                     <img src="Year 2/Temecula_Second_Anniversary_2024_17.jpg">
                 </a>
-                <a href="Year 2/Temecula_Second_Anniversary_2024_18.jpg" data-lightbox="Year 2" data-title="Temecula - Second Anniversary 2024">
-                    <img src="Year 2/Temecula_Second_Anniversary_2024_18.jpg">
-                </a>
-                <a href="Year 2/Temecula_Second_Anniversary_2024_19.jpg" data-lightbox="Year 2" data-title="Temecula - Second Anniversary 2024">
-                    <img src="Year 2/Temecula_Second_Anniversary_2024_19.jpg">
-                </a>
 
-            </div>
-        </div>
 
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <span class="close" onclick="closePopup()">&times;</span>
-                <h2>Second Anniversary</h2>
-                <p>
-                    Two years ago I made the decision to begin a journey. A journey that I was ready to embark on without any knowledge of where it would take me. 
-                    It all started when I met this girl. We would go out on cute dates, chat all night long until the sun shined through the blinds, and catch the 
-                    fictional sunrises and immersive sunsets together. This girl was special. Perfect, in fact. Over the past couple years she has made me feel levels 
-                    of joy, happiness, and comfort that I had never felt before. Her smile is contagious, her eyes I could stare into indefinitely, her voice calms my 
-                    mind, and her touch fills my heart. She is the only person who knows me for who I really am, and I know that nobody will be able to truly understand 
-                    the infinite amount of love I have for her. If I could go back two years, I would tell myself that the decision to live life with this amazing person 
-                    would be the best decision I will ever make.
-                </p>
-    
-                <p>
-                    <br><br>My Dearest Ayesha, <br><br>
-    
-                    I know this is just the second chapter of our long journey together, but that feeling I had two years ago has only gotten stronger with time. I cannot 
-                    wait to see what the future holds for us. My goal is for this website to be the one place that encapsulates all of our memories together, one year at a 
-                    time. A place you can visit when you are having a bad day and need calm or comfort. A place where we can look back at all the good times and share them 
-                    with friends and family. And most importantly, a place where we can show our future kids what true love looks like. Happy Anniversary, my love! I am forever 
-                    grateful for you.<br><br>
-                    
-                    Love,<br>
-                    Ryan
-                </p>
             </div>
         </div>
 
@@ -540,19 +522,34 @@
                 }
             }
 
-            document.getElementById("popupButton").onclick = function() {
-                document.getElementById("popup").style.display = "block";
-            }
+            const correctPin = "0630";
+
+            document.getElementById("popupButton").addEventListener("click", () => {
+            document.getElementById("pinModal").style.display = "block";
+            });
+
+            document.getElementById("submitPin").addEventListener("click", () => {
+                const enteredPin = document.getElementById("pinInput").value;
+                const promptText = document.getElementById("pinPrompt");
+
+                if (enteredPin === correctPin) {
+                    window.location.href = "notes.html";
+                } else {
+                    promptText.textContent = "Invalid PIN. Please try again:";
+                    promptText.style.color = "red";
+                }
+            });
+
+            document.getElementById("pinInput").addEventListener("input", function() {
+            this.value = this.value.replace(/\D/g, ''); // Remove non-digits
+            });
 
             function closePopup() {
-                document.getElementById("popup").style.display = "none";
-            }
-
-            window.onclick = function(event) {
-                var popup = document.getElementById("popup");
-                if (event.target == popup) {
-                    popup.style.display = "none";
-                }
+                document.getElementById("pinModal").style.display = "none";
+                document.getElementById("pinInput").value = "";
+                const promptText = document.getElementById("pinPrompt");
+                promptText.textContent = "Please enter your PIN:";
+                promptText.style.color = "black";
             }
         </script>
     </body>

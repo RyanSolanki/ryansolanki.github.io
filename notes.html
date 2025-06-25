@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Year 1 Image Gallery</title>
+        <link rel="stylesheet" href="gallery_style.css">
+        <link rel="stylesheet" href="lightbox.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body style="background-color:#f6eee8;">
+                
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="year1.html">Year 1</a></li>
+                <li><a href="year2.html">Year 2</a></li>
+                <li><a href="year3.html">Year 3</a></li>
+            </ul>
+        </nav>
+
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" onkeyup="searchImages()" placeholder="Search for images...">
+        </div>
+
+        <div class="container">
+            <div class="gallery">
+
+                <a href="Year1/FirstAnniversaryNote.jpg" data-lightbox="Year 1" data-title="First Anniversary Note 2023">
+                    <img src="Year1/FirstAnniversaryNote.jpg">
+                </a>
+                <a href="Year1/FirstValentinesNote.jpg" data-lightbox="Year 1" data-title="First Valentines Note 2023">
+                    <img src="Year1/FirstValentinesNote.jpg">
+                </a>
+                <a href="Year 2/Note_2023.jpg" data-lightbox="Year 2" data-title="Cute Note 2023">
+                    <img src="Year 2/Note_2023.jpg">
+                </a>
+                <a href="Year 2/ValentinesNote_2024.jpg" data-lightbox="Year 2" data-title="Valentine's Day 2024">
+                    <img src="Year 2/ValentinesNote_2024.jpg">
+                </a>
+                <a href="Year 3/Ayesha_Card_2025.jpg" data-lightbox="Year 3" data-title="Ayesha's Valentine's Day Card 2025">
+                    <img src="Year 3/Ayesha_Card_2025.jpg">
+                </a>
+                <a href="Year 3/Ryan_24th_Birthday_Card_2025.jpg" data-lightbox="Year 3" data-title="Ryan's 24th Birthday Card 2025">
+                    <img src="Year 3/Ryan_24th_Birthday_Card_2025.jpg">
+                </a>
+
+            </div>
+        </div>
+
+        <script src="lightbox-plus-jquery.js"></script>
+        <script>
+            function searchImages() {
+                var input, filter, gallery, links, a, i, txtValue;
+                input = document.getElementById("searchInput");
+                filter = input.value.toUpperCase();
+                gallery = document.getElementsByClassName("gallery")[0];
+                links = gallery.getElementsByTagName("a");
+                for (i = 0; i < links.length; i++) {
+                    a = links[i];
+                    txtValue = a.getAttribute("data-title");
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        a.style.display = "";
+                    } else {
+                        a.style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

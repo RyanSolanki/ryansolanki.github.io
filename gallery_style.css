@@ -136,6 +136,18 @@
     margin-bottom: 20px;
 }
 
+.heart-image {
+    height: 42px;
+    border: none;
+    background: none;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.heart-image img {
+    height: 100%;
+}
+
 #pinInput {
   height: 30px;     
   font-size: 20px;   

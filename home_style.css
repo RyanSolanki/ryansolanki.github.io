@@ -405,7 +405,7 @@ img.Year1 {
 
     .navbar ul li a {
         font-size: clamp(15px, 4.2vw, 20px);
-        padding: 14px 3px;
+        padding: 20px 3px;
         white-space: nowrap;
     }
 }

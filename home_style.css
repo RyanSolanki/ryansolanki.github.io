@@ -111,7 +111,7 @@ img.Year1 {
 .navbar ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0 8px;
     display: flex;
     justify-content: space-around;
 }
@@ -124,10 +124,11 @@ img.Year1 {
     display: block;
     color: #f6eee8;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 8px;
     text-decoration: none;
     font-family: "Brush Script MT", cursive;
-    font-size: 25px;
+    font-size: clamp(16px, 5vw, 25px);
+    white-space: nowrap;
 }
 
 .navbar ul li a:hover {
@@ -391,5 +392,20 @@ img.Year1 {
         top: 70vh;
         position: absolute;
         color:black;
+    }
+
+    .navbar ul {
+        padding: 0 12px;
+        gap: 6px;
+    }
+
+    .navbar ul li {
+        flex: 0 1 auto;
+    }
+
+    .navbar ul li a {
+        font-size: clamp(15px, 4.2vw, 20px);
+        padding: 10px 3px;
+        white-space: nowrap;
     }
 }

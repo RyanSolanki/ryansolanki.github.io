@@ -35,7 +35,7 @@
 .navbar ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0 8px;
     display: flex;
     justify-content: space-around;
 }
@@ -47,12 +47,10 @@
     display: block;
     color: #f6eee8;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 8px;
     text-decoration: none;
     font-family: "Brush Script MT", cursive;
-    /* dynamic text size */
     font-size: clamp(16px, 5vw, 25px);
-    /* prevents Year 1 from splitting into two lines */
     white-space: nowrap;
 }
 
@@ -183,5 +181,20 @@
 
     .popup-content p {
         font-size: 14px;
+    }
+
+    .navbar ul {
+        padding: 0 12px;
+        gap: 6px;
+    }
+
+    .navbar ul li {
+        flex: 0 1 auto;
+    }
+
+    .navbar ul li a {
+        font-size: clamp(15px, 4.2vw, 20px);
+        padding: 10px 3px;
+        white-space: nowrap;
     }
 }
